@@ -28,7 +28,7 @@
 							
 			var BLACK=0x000000,
 				WHITE=0xffffff,
-				RADIUS=.15,
+				RADIUS=.1,
 				LINE_WIDTH=1,
 				CAMERA_Z=5;
 				FAR_Z=-25,
@@ -120,7 +120,7 @@
 					particle = particles[i]; 			 
 					particle.scale.x = particle.scale.y = particle.scale.z = delta;					
 					particle.position.x = SCALE*Math.sin(theta/7*SPEED);
-					particle.position.y = SCALE*Math.cos(theta/8*SPEED)-0.3;
+					particle.position.y = SCALE*Math.cos(theta/8*SPEED)-0.25;
 					particle.position.z = SCALE*Math.cos(theta*.18*SPEED);// + CAMERA_Z/3;
 
 					particle.rotation.x = tick/4;
