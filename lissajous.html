@@ -27,6 +27,7 @@
 				SPACING = 1.5;
 				PARTICLE_COUNT=500;
 				SPEED=7;
+				SCALE=0.8;
 			//	50hh;
 			var camera, scene, renderer, directionalLight;
 			var geometry, material, mesh;
@@ -99,9 +100,9 @@
 					
 					particle = particles[i]; 			 
 					particle.scale.x = particle.scale.y = particle.scale.z = delta;					
-					particle.position.x = Math.sin(theta/7*SPEED)*CAMERA_Z/3;
-					particle.position.y = Math.cos(theta/8*SPEED)*CAMERA_Z/3;
-					particle.position.z = Math.cos(theta*.18*SPEED)*CAMERA_Z/2;// + CAMERA_Z/3;
+					particle.position.x = SCALE*Math.sin(theta/7*SPEED)*CAMERA_Z/3;
+					particle.position.y = SCALE*Math.cos(theta/8*SPEED)*CAMERA_Z/3;
+					particle.position.z = SCALE*Math.cos(theta*.18*SPEED)*CAMERA_Z/2;// + CAMERA_Z/3;
 
 					particle.rotation.x = tick/4;
 					particle.rotation.y = tick/4;
