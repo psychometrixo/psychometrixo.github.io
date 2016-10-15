@@ -20,6 +20,7 @@
 			    camera.aspect = window.innerWidth / window.innerHeight;
 			    camera.updateProjectionMatrix();
 			    renderer.setSize( window.innerWidth, window.innerHeight );
+			    getAspectRatio();
 			}
 			
 			// workaround for chrome bug: http://code.google.com/p/chromium/issues/detail?id=35980#c12
@@ -39,9 +40,6 @@
 			var camera, scene, renderer, directionalLight;
 			var geometry, material, mesh;
 			var particles = [];
-			width = window.innerWidth;
-			height = window.innerHeight;
-			aspectRatio = width/height;
 
 			getAspectRatio();
 			init();
@@ -49,7 +47,8 @@
 			
 			function getAspectRatio(){
 				width = window.innerWidth;
-				height = window.innerHeight*1.0;
+				height = window.innerHeight;
+				aspectRatio = width/height;
 			}
 
 			function between(low,high) {
