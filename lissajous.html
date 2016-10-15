@@ -17,10 +17,10 @@
 		<script>
 			window.addEventListener( 'resize', onWindowResize, false );
 			function onWindowResize(){
-			    camera.aspect = window.innerWidth / window.innerHeight;
+			    camera.aspect = window.innerWidth * 1.0 / window.innerHeight;
 			    camera.updateProjectionMatrix();
 			    renderer.setSize( window.innerWidth, window.innerHeight );
-			    getAspectRatio();
+			    setAspectRatio();
 			}
 			
 			// workaround for chrome bug: http://code.google.com/p/chromium/issues/detail?id=35980#c12
@@ -41,14 +41,14 @@
 			var geometry, material, mesh;
 			var particles = [];
 
-			getAspectRatio();
+			setAspectRatio();
 			init();
 			animate();
 			
-			function getAspectRatio(){
+			function setAspectRatio(){
 				width = window.innerWidth;
 				height = window.innerHeight;
-				aspectRatio = width/height;
+				aspectRatio = width*1.0/height;
 			}
 
 			function between(low,high) {
