@@ -58,8 +58,8 @@
 				// Camera params : 
 				// field of view, aspect ratio for render output, near and far clipping plane. 
 				var width = window.innerWidth;
-				var height = window.innerHeight;
-				camera = new THREE.PerspectiveCamera(45, 1,1,1000);//window.innerWidth / window.innerHeight, 1, 1000 );				
+				var height = window.innerHeight*1.0;
+				camera = new THREE.PerspectiveCamera(45, width/height,1,1000);//window.innerWidth / window.innerHeight, 1, 1000 );				
 					//new THREE.OrthographicCamera( width / - 2, width / 2, height / 2, height / - 2, -CAMERA_Z*2, CAMERA_Z * 2 );
 				//camera.setLens(105);
 //				camera.position.z = CAMERA_Z;
