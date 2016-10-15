@@ -61,6 +61,7 @@
 				var height = window.innerHeight;
 				camera = //new THREE.PerspectiveCamera(45, 1,1,1000);//window.innerWidth / window.innerHeight, 1, 1000 );				
 					new THREE.OrthographicCamera( width / - 2, width / 2, height / 2, height / - 2, -CAMERA_Z*2, CAMERA_Z * 2 );
+				camera.setLens(105);
 //				camera.position.z = CAMERA_Z;
 
 				scene = new THREE.Scene();
